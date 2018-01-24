@@ -38,7 +38,7 @@ set_options(visible_tables = ['films'])
 *** =xp1: 30
 
 *** =instructions1
-Get the title and release year for films released in the 90s.
+bla
 
 *** =solution1
 ```{sql}
