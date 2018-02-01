@@ -1,6 +1,8 @@
 ---
-title       : Chapter
-description : The first chapter
+title: Chapter
+description: >-
+  The first chapter
+
 
 ---
 ## New subexercises
@@ -9,39 +11,43 @@ description : The first chapter
 type: TabExercise
 lang: sql
 xp: 100
+
 key: ecc1838fc7
 ```
 
 This is what new tab exercises look like.
+
+
 
 `@pre_exercise_code`
 ```{python}
 connect('postgresql', 'films')
 set_options(visible_tables = ['films'])
 ```
-
 `@sample_code`
 ```{sql}
 -- Nothing here
 ```
 
+
+
+
 ***
+
+
 
 ```yaml
 type: NormalExercise
-key: 510b387baa
+
 xp: 30
+
+key: 510b387baa
 ```
+
+
 
 `@instructions`
 Get the title and release year for films released in the 90s.
-
-`@solution`
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE release_year >= 1990 AND release_year < 2000;
-```
 
 `@hint`
 ```
@@ -50,6 +56,14 @@ FROM ___
 WHERE ___ >= 1990 AND ___ < 2000;
 ```
 
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE release_year >= 1990 AND release_year < 2000;
+```
 `@sct`
 ```{python}
 sel = check_node('SelectStmt')
@@ -78,24 +92,25 @@ Ex().test_correct(check_result(), [
 ])
 ```
 
+
+
+
 ***
+
+
 
 ```yaml
 type: NormalExercise
-key: 969ed73542
+
 xp: 30
+
+key: 969ed73542
 ```
+
+
 
 `@instructions`
 Now, build on your query to filter the records to only include French or Spanish language films.
-
-`@solution`
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE (release_year >= 1990 AND release_year < 2000)
-AND (language = 'French' OR language = 'Spanish');
-```
 
 `@hint`
 ```
@@ -105,6 +120,15 @@ WHERE (___ >= 1990 AND ___ < 2000)
 AND (___ = 'French' OR ___ = 'Spanish');
 ```
 
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE (release_year >= 1990 AND release_year < 2000)
+AND (language = 'French' OR language = 'Spanish');
+```
 `@sct`
 ```{python}
 sel = check_node('SelectStmt')
@@ -140,25 +164,25 @@ Ex().test_correct(check_result(), [
 ])
 ```
 
+
+
+
 ***
+
+
 
 ```yaml
 type: NormalExercise
-key: d961856c7a
+
 xp: 30
+
+key: d961856c7a
 ```
+
+
 
 `@instructions`
 Finally, restrict the query to only return films that took in more than $2M gross.
-
-`@solution`
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE (release_year >= 1990 AND release_year < 2000)
-AND (language = 'French' OR language = 'Spanish')
-AND gross > 2000000;
-```
 
 `@hint`
 ```
@@ -169,6 +193,16 @@ AND (___ = '___' OR ___ = '___')
 AND ___ > ___;
 ```
 
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE (release_year >= 1990 AND release_year < 2000)
+AND (language = 'French' OR language = 'Spanish')
+AND gross > 2000000;
+```
 `@sct`
 ```{python}
 sel = check_node('SelectStmt')
@@ -205,3 +239,32 @@ Ex().test_correct(check_result(), [
     test_error()
 ])
 ```
+
+
+
+
+---
+## This is a normal exercise title
+
+```yaml
+type: NormalExercise
+
+xp: 
+
+key: 639c3ece71
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+
+
+
+
+
+

@@ -1,9 +1,19 @@
 ---
-title       : Chapter
-description : The first chapter
+title: Chapter
+description: >-
+  The first chapter
 
---- type:TabExercise lang:sql xp:100 key:ecc1838fc7
+
+---
 ## WHERE AND OR (2)
+
+```yaml
+type: TabExercise
+lang: sql
+xp: 100
+
+key: ecc1838fc7
+```
 
 You now know how to select rows that meet __some__ but not __all__ conditions by combining `AND` and `OR`.
 
@@ -22,39 +32,47 @@ Now you'll write a query to get the title and release year of films released in 
 
 It looks like a lot, but you can build the query up one step at a time to get comfortable with the underlying concept in each step. Let's go!
 
-*** =pre_exercise_code
-```{python}
-connect('postgresql', 'films')
-set_options(visible_tables = ['films'])
+
+
+
+
+
+
+
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 30
+
+key: 510b387baa
 ```
 
-*** =sample_code
-```{sql}
-```
 
-*** =type1: NormalExercise
 
-*** =key1: 510b387baa
-*** =xp1: 30
-
-*** =instructions1
+`@instructions`
 bla
 
-*** =solution1
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE release_year >= 1990 AND release_year < 2000;
-```
-
-*** =hint1
+`@hint`
 ```
 SELECT ___, ___
 FROM ___
 WHERE ___ >= 1990 AND ___ < 2000;
 ```
 
-*** =sct1
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE release_year >= 1990 AND release_year < 2000;
+```
+`@sct`
 ```{python}
 sel = check_node('SelectStmt')
 
@@ -82,22 +100,27 @@ Ex().test_correct(check_result(), [
 ])
 ```
 
-*** =type2: NormalExercise
-*** =key2: 969ed73542
-*** =xp2: 30
 
-*** =instructions2
-Now, build on your query to filter the records to only include French or Spanish language films.
 
-*** =solution2
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE (release_year >= 1990 AND release_year < 2000)
-AND (language = 'French' OR language = 'Spanish');
+
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 30
+
+key: 969ed73542
 ```
 
-*** =hint2
+
+
+`@instructions`
+Now, build on your query to filter the records to only include French or Spanish language films.
+
+`@hint`
 ```
 SELECT ___, ___
 FROM ___
@@ -105,7 +128,16 @@ WHERE (___ >= 1990 AND ___ < 2000)
 AND (___ = 'French' OR ___ = 'Spanish');
 ```
 
-*** =sct2
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE (release_year >= 1990 AND release_year < 2000)
+AND (language = 'French' OR language = 'Spanish');
+```
+`@sct`
 ```{python}
 sel = check_node('SelectStmt')
 
@@ -140,24 +172,27 @@ Ex().test_correct(check_result(), [
 ])
 ```
 
-*** =type3: NormalExercise
-*** =key3: d961856c7a
 
-*** =xp3: 30
 
-*** =instructions3
-Finally, restrict the query to only return films that took in more than $2M gross.
 
-*** =solution3
-```{sql}
-SELECT title, release_year
-FROM films
-WHERE (release_year >= 1990 AND release_year < 2000)
-AND (language = 'French' OR language = 'Spanish')
-AND gross > 2000000;
+***
+
+
+
+```yaml
+type: NormalExercise
+
+xp: 30
+
+key: d961856c7a
 ```
 
-*** =hint3
+
+
+`@instructions`
+Finally, restrict the query to only return films that took in more than $2M gross.
+
+`@hint`
 ```
 SELECT ___, ___
 FROM ___
@@ -166,7 +201,17 @@ AND (___ = '___' OR ___ = '___')
 AND ___ > ___;
 ```
 
-*** =sct3
+
+
+`@solution`
+```{sql}
+SELECT title, release_year
+FROM films
+WHERE (release_year >= 1990 AND release_year < 2000)
+AND (language = 'French' OR language = 'Spanish')
+AND gross > 2000000;
+```
+`@sct`
 ```{python}
 sel = check_node('SelectStmt')
 
@@ -202,3 +247,61 @@ Ex().test_correct(check_result(), [
     test_error()
 ])
 ```
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+
+xp: NaN
+
+key: 5f8b5305f3
+```
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+
+xp: NaN
+
+key: fc5977b0d0
+```
+
+		lkdnsalkdaskldklasnkldasdaslkndasd
+		asd
+		as
+		dsa
+		das
+		d
+		as
+		dada
+
+`@instructions`
+
+
+`@hint`
+
+
+
+
+
+
+
+
