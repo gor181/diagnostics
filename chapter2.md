@@ -11,8 +11,6 @@ description: >-
 type: TabExercise
 lang: sql
 xp: 100
-
-key: ecc1838fc7
 ```
 
 This is what new tab exercises look like.
@@ -40,8 +38,6 @@ set_options(visible_tables = ['films'])
 type: NormalExercise
 
 xp: 30
-
-key: 510b387baa
 ```
 
 
@@ -103,8 +99,6 @@ Ex().test_correct(check_result(), [
 type: NormalExercise
 
 xp: 30
-
-key: 969ed73542
 ```
 
 
@@ -175,8 +169,6 @@ Ex().test_correct(check_result(), [
 type: NormalExercise
 
 xp: 30
-
-key: d961856c7a
 ```
 
 
@@ -248,10 +240,6 @@ Ex().test_correct(check_result(), [
 
 ```yaml
 type: NormalExercise
-
-xp: 
-
-key: 639c3ece71
 ```
 
 
